@@ -28,34 +28,36 @@
   </header>
 
   <main>
-    <section class="popular">
-      <h2>Uppskattade växter</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, corporis ipsum.</p>
-      <section class="popularimages">
-        <img alt="" src="https://picsum.photos/200" />
-        <img alt="" src="https://picsum.photos/201" />
-        <img alt="" src="https://picsum.photos/202" />
-        <img alt="" src="https://picsum.photos/203" />
-        <img alt="" src="https://picsum.photos/204" />
-        <img alt="" src="https://picsum.photos/205" />
-      </section>
+    <h2>Uppskattade växter</h2>
+    <p class="center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, corporis ipsum.</p>
+    <section class="popularimages">
+      <img alt="" src="https://picsum.photos/200" />
+      <img alt="" src="https://picsum.photos/201" />
+      <img alt="" src="https://picsum.photos/202" />
+      <img alt="" src="https://picsum.photos/203" />
+      <img alt="" src="https://picsum.photos/204" />
+      <img alt="" src="https://picsum.photos/205" />
     </section>
-    <section>
-      <img alt="" src="Assets/images/icon-planting.svg" />
-      <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+
+    <section class="newsletter">
+      <div class="center planting"><img alt="" src="Assets/images/icon-planting.svg" /></div>
+      <h2 class="center">Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
       <form name="subscribe">
-        <label for="email">E-mail address</label>
-        <input type="text" name="email" placeholder="e-mail" required />
-        <input type="button" title="Submit" form="subscribe" name="Submit" value="Submit" />
+        <label class="visually-hidden" for="email">E-mail address</label>
+        <div>
+          <input type="text" name="email" placeholder="email@domain.com" required />
+          <input type="button" title="Submit" form="subscribe" name="Submit" value="SKICKA" />
+        </div>
       </form>
     </section>
+
     <section class="cards">
       <article class="card">
         <img alt="" src="https://picsum.photos/206" />
         <div class="tags">
-          Blommor
-          Ätbart
-          Grönska
+          <div class="tag">Blommor</div>
+          <div class="tag">Ätbart</div>
+          <div class="tag">Grönska</div>
         </div>
         <h3>Gurka</h3>
         <p>Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
@@ -64,9 +66,9 @@
       <article class="card">
         <img alt="" src="https://picsum.photos/207" />
         <div class="tags">
-          Solälskande
-          Lättodlat
-          Ätbart
+          <div class="tag">Solälskande</div>
+          <div class="tag">Lättodlat</div>
+          <div class="tag">Ätbart</div>
         </div>
         <h3>Tomat</h3>
         <p>En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.</p>
@@ -74,10 +76,10 @@
       <article class="card">
         <img alt="" src="https://picsum.photos/208" />
         <div class="tags">
-          Dekorativ
-          Färgstark
-          Tålig
-          Blommor
+          <div class="tag">Dekorativ</div>
+          <div class="tag">Färgstark</div>
+          <div class="tag">Tålig</div>
+          <div class="tag">Blommor</div>
         </div>
         <h3>Pelargon</h3>
         <p>En vacker och lättskött blomma som trivs både inne och ute under sommaren.</p>
@@ -85,9 +87,9 @@
       <article class="card">
         <img alt="" src="https://picsum.photos/209" />
         <div class="tags">
-          Kryddor
-          Doftande
-          Solälskande
+          <div class="tag">Kryddor</div>
+          <div class="tag">Doftande</div>
+          <div class="tag">Solälskande</div>
         </div>
         <h3>Basilika</h3>
         <p>En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.</p>
@@ -95,9 +97,9 @@
       <article class="card">
         <img alt="" src="https://picsum.photos/210" />
         <div class="tags">
-          Snabbväxande
-          Ätbart
-          Grönska
+          <div class="tag">Snabbväxande</div>
+          <div class="tag">Ätbart</div>
+          <div class="tag">Grönska</div>
         </div>
         <h3>Sallad</h3>
         <p>Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.</p>
@@ -105,15 +107,18 @@
       <article class="card">
         <img alt="" src="https://picsum.photos/211" />
         <div class="tags">
-          Luftfuktande
-          Grönska
-          Dekorativ
+          <div class="tag">Luftfuktande</div>
+          <div class="tag">Grönska</div>
+          <div class="tag">Dekorativ</div>
         </div>
         <h3>Ormbunke</h3>
         <p>En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.</p>
       </article>
     </section>
-    <section>
+    <section class="previous">
+      <div class="plant">
+        <img alt="" src="Assets/images/icon-seedling.svg" />
+      </div>
       <h2>Våra tidigare odlingar</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur deserunt
         veritatis.
@@ -131,7 +136,8 @@
       </a>
     </div>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam alias
-    perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius molestias?</p>
+      perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius molestias?
+    </p>
     <div>Telefon: 020-1234567</div>
     <div>info@plannedplant.com</div>
 
