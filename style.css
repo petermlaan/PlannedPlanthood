@@ -150,6 +150,19 @@ a {
   text-align: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin-left: 20px;
+
+    h2 {
+      width: 4em;
+    }
+  }
+}
+
 nav {
   display: none;
 }
@@ -165,19 +178,15 @@ header {
   background-color: white;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  display: flex;
+  /* justify-content: space-between; */
   align-items: center;
 
-  a {
-    margin-left: 20px;
+  nav {
+    display: flex;
+    justify-content: space-between;
 
-    h2 {
-      width: 4em;
+    li {
+      display: inline;
     }
   }
 }
@@ -346,6 +355,7 @@ main {
       border-radius: 50%;
       width: 200px;
       height: 200px;
+      margin-right: 40px;
 
       img {
         position: relative;
@@ -353,26 +363,43 @@ main {
         left: 60px;
         top: 40px;
       }
-
     }
 
     h2 {
       padding: 20px 0 10px 0;
     }
 
-    input {
-      justify-self: flex-end;
-      background-color: green;
-      color: white;
-      padding: 8px 12px;
-      border-top-left-radius: 10% 50%;
-      border-bottom-left-radius: 10% 50%;
-      border-top-right-radius: 10% 50%;
-      border-bottom-right-radius: 10% 50%;
+    .prevtxt {
+      display: grid;
+      justify-items: center;
+
+      p {
+        text-align: center;
+      }
+
+      input {
+        justify-self: flex-end;
+        background-color: green;
+        color: white;
+        padding: 8px 12px;
+        margin: 10px 0;
+        border-top-left-radius: 10% 50%;
+        border-bottom-left-radius: 10% 50%;
+        border-top-right-radius: 10% 50%;
+        border-bottom-right-radius: 10% 50%;
+      }
     }
 
     @media (width > 800px) {
       grid-template-columns: 200px 500px;
+
+      .prevtxt {
+        justify-items: flex-start;
+
+        p {
+          text-align: left;
+        }
+      }
     }
   }
 }
@@ -390,10 +417,20 @@ footer {
 
   div {
     font-weight: bold;
-    
+
     img {
       display: inline;
       padding-right: 10px;
     }
+  }
+}
+
+@media (width > 800px) {
+  nav {
+    display: inline;
+  }
+
+  .burger {
+    display: none;
   }
 }
