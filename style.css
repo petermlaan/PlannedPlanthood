@@ -167,13 +167,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  .logo {
-    display: flex;
-    align-items: center;
+.logo {
+  display: flex;
+  align-items: center;
 
-    a {
-      margin-left: 20px;
+  a {
+    margin-left: 20px;
+
+    h2 {
+      width: 4em;
     }
   }
 }
@@ -181,7 +185,7 @@ header {
 main {
   padding-top: 50px;
   display: grid;
-  grid-template-columns: min-content;
+  grid-template-columns: 1fr;
   justify-items: center;
   justify-content: center;
   gap: 20px;
@@ -190,7 +194,15 @@ main {
     background-color: white;
     padding: 20px;
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 200px;
+
+    @media (width > 500px) {
+      grid-template-columns: 200px 200px;
+    }
+
+    @media (width > 750px) {
+      grid-template-columns: 200px 200px 200px;
+    }
   }
 
 
@@ -198,7 +210,7 @@ main {
     background-color: white;
     width: 100%;
     margin: 0;
-    padding: 20px 0;
+    padding: 40px 20px;
     display: grid;
     justify-items: center;
 
@@ -206,7 +218,9 @@ main {
       border-radius: 50%;
       width: 200px;
       height: 200px;
+      margin: 10px;
       background-color: green;
+      direction: ltr;
 
       img {
         position: relative;
@@ -216,39 +230,68 @@ main {
       }
     }
 
-    form>div {
-      border: 1px solid;
-      border-top-left-radius: 10% 50%;
-      border-bottom-left-radius: 10% 50%;
-      border-top-right-radius: 10% 50%;
-      border-bottom-right-radius: 10% 50%;
-      padding: 10px;
+    .signup {
+      direction: ltr;
 
-      [type="button"] {
-        background-color: green;
-        color: white;
-        padding: 5px;
-        border-top-left-radius: 20% 50%;
-        border-bottom-left-radius: 20% 50%;
-        border-top-right-radius: 20% 50%;
-        border-bottom-right-radius: 20% 50%;
+      form > div {
+        border: 1px solid;
+        border-top-left-radius: 7% 50%;
+        border-bottom-left-radius: 7% 50%;
+        border-top-right-radius: 7% 50%;
+        border-bottom-right-radius: 7% 50%;
+        width: max-content;
+        margin: 20px auto;
+
+        [type=text] {
+          border: 0;
+          margin: 0 10px 0 20px;
+        }
+
+        [type="button"] {
+          background-color: green;
+          color: white;
+          padding: 7px 15px;
+          margin: 2px;
+          border-top-left-radius: 20% 50%;
+          border-bottom-left-radius: 20% 50%;
+          border-top-right-radius: 20% 50%;
+          border-bottom-right-radius: 20% 50%;
+        }
       }
+    }
+
+    @media (width > 800px) {
+      grid-template-columns: auto auto;
+      direction: rtl;
     }
   }
 
   .cards {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 400px;
+    grid-template-columns: 300px;
     gap: 10px;
+
+    @media (width > 650px) {
+      grid-template-columns: 300px 300px;
+    }
+
+    @media (width > 1000px) {
+      grid-template-columns: 300px 300px 300px;
+    }
+
+    @media (width > 1350px) {
+      grid-template-columns: 300px 300px 300px 300px;
+    }
 
     .card {
       background-color: white;
       padding: 20px;
+      width: 300px;
 
       img {
-        width: 360px;
-        height: 260px;
+        width: 260px;
+        height: 200px;
       }
 
       .tags {
@@ -315,13 +358,7 @@ footer {
   padding: 10px;
   display: grid;
 
-  .logo {
-    display: flex;
-    align-items: center;
-
-    h2 {
-      color: white;
-      width: 5em;
-    }
+  h2 {
+    color: white;
   }
 }
