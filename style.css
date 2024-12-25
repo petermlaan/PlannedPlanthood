@@ -212,8 +212,8 @@ main {
     margin: 0;
     padding: 40px 20px;
     display: grid;
-    grid-template-columns: 27em 220px;
     justify-content: center;
+    justify-items: center;
 
     .planting {
       border-radius: 50%;
@@ -232,8 +232,13 @@ main {
 
     .signup {
       direction: ltr;
-      width: 25em;
       padding-top: 20px;
+      display: grid;
+      justify-items: center;
+
+      h2 {
+        text-align: center;
+      }
 
       form>div {
         border: 1px solid;
@@ -266,6 +271,14 @@ main {
     @media (width > 800px) {
       grid-template-columns: auto auto;
       direction: rtl;
+
+      .signup {
+        width: 25em;
+
+        h2 {
+          text-align: left;
+        }
+      }
     }
   }
 
@@ -321,8 +334,12 @@ main {
   .previous {
     background-color: white;
     padding: 50px 20px;
+    width: 100%;
     display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
     justify-items: center;
+    gap: 20px;
 
     .plant {
       background-color: green;
@@ -355,7 +372,7 @@ main {
     }
 
     @media (width > 800px) {
-      grid-template-columns: auto auto;
+      grid-template-columns: 200px 500px;
     }
   }
 }
@@ -363,10 +380,20 @@ main {
 footer {
   background-color: green;
   color: white;
-  padding: 10px;
+  padding: 40px 20px;
   display: grid;
+  gap: 20px;
 
   h2 {
     color: white;
+  }
+
+  div {
+    font-weight: bold;
+    
+    img {
+      display: inline;
+      padding-right: 10px;
+    }
   }
 }
