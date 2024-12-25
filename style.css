@@ -141,7 +141,6 @@ a {
 
   &:hover,
   &:focus-visible {
-    color: var(--clr-primary-light-1);
     text-decoration: underline;
   }
 }
@@ -161,6 +160,14 @@ a {
 
 nav {
   display: none;
+
+  ul {
+    list-style: none;
+
+    a {
+      font-weight: bold;
+    }
+  }
 }
 
 body {
@@ -174,15 +181,35 @@ header {
   background-color: white;
   padding: 10px;
   display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
+  justify-content: space-around;
 
   nav {
-    display: flex;
-    justify-content: space-between;
+    height: 100%;
 
-    li {
-      display: inline;
+    ul {
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        height: 100%;
+        display: flex;
+        padding: 0 20px;
+        align-items: center;
+
+        a {
+          font-size: x-large;
+          line-height: 100%;
+        }
+
+        &:hover {
+          background-color: green;
+
+          a {
+            color: white;
+          }
+        }
+      }
     }
   }
 }
@@ -441,7 +468,6 @@ footer {
     margin: 0 20px 0 40px;
 
     li {
-      list-style: none;
       margin-bottom: 20px;
 
       a {
