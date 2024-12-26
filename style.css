@@ -189,17 +189,25 @@ header {
 
   .burger {
     anchor-name: --burger;
+    border: 0;
+    background-color: inherit;
   }
 
   #popmenu {
     position: absolute;
     position-anchor: --burger;
     background-color: green;
-    margin: 0;
+    margin: 7px 0;
+    padding: 10px;
     inset: auto;
     border: 0;
     top: anchor(bottom);
     right: anchor(right);
+    transition: opacity 3s;
+
+    li {
+      padding: 5px 0;
+    }
 
     a {
       color: white;
@@ -256,6 +264,8 @@ main {
     grid-template-columns: 200px;
 
     >img {
+      width: 200px;
+      height: 200px;
       transition: scale 300ms linear, opacity 300ms linear;
 
       &:hover {
@@ -509,7 +519,6 @@ footer {
 }
 
 @media (width > 850px) {
-
   #topmenu,
   #bottommenu {
     display: inline;
