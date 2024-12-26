@@ -180,6 +180,7 @@ body {
 }
 
 header {
+  position: relative;
   background-color: white;
   padding: 0 10px;
   display: flex;
@@ -188,22 +189,22 @@ header {
   column-gap: 40px;
 
   .burger {
-    anchor-name: --burger;
+    anchor-name: --burgera;
     border: 0;
     background-color: inherit;
   }
 
-  #popmenu {
+  .popmenu {
     position: absolute;
-    position-anchor: --burger;
-    background-color: var(--clr-accent);
-    margin: 7px 0;
-    padding: 10px;
+    position-anchor: --burgera;
     inset: auto;
-    border: 0;
     top: anchor(bottom);
     right: anchor(right);
-    transition: opacity 3s;
+    background-color: var(--clr-accent);
+    border: 0;
+    border-radius: 10%;
+    margin: 5px 0;
+    padding: 10px;
 
     li {
       padding: 5px 0;
@@ -217,6 +218,7 @@ header {
       display: grid;
     }
   }
+
 
   #topmenu {
     height: 100%;
