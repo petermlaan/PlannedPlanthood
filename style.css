@@ -383,13 +383,23 @@ main {
     }
 
     .card {
+      position: relative;
       background-color: white;
       padding: 20px;
       width: 300px;
 
-      img {
+      .cardimg {
         width: 260px;
         height: 200px;
+      }
+
+      .cardseed {
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        top: 75px;
+        left: 70px;
+        opacity: 0.5;
       }
 
       .tags {
