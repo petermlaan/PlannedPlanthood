@@ -19,8 +19,12 @@
         <h2>PLANTHOOD</h2>
       </a>
     </div>
-    <img class="burger" alt="" src="Assets/images/navicon.svg" width="50px" height="50px" />
-    <nav>
+
+    <button class="burger" popovertarget="popmenu">
+      <img alt="" src="Assets/images/navicon.svg" width="50px" height="50px" />
+    </button>
+
+    <nav id="topmenu">
       <ul>
         <li><a href="#">HEM</a></li>
         <li><a href="#">HISTORIK</a></li>
@@ -28,6 +32,17 @@
         <li><a href="#">KONTAKT</a></li>
       </ul>
     </nav>
+
+    <div id="popmenu" popover>
+      <nav>
+        <ul>
+          <li><a href="#">Hem</a></li>
+          <li><a href="#">Historik</a></li>
+          <li><a href="#">Tips</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -152,7 +167,7 @@
       <div><img alt="" src="Assets/images/icon-phone.svg" />Telefon: 020-1234567</div>
       <div><img alt="" src="Assets/images/icon-email.svg" />info@plannedplant.com</div>
     </div>
-    <nav>
+    <nav id="bottommenu">
       <ul>
         <li><a href="#">Hem</a></li>
         <li><a href="#">Historik</a></li>

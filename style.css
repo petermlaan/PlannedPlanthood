@@ -159,7 +159,8 @@ a {
   }
 }
 
-nav {
+#topmenu,
+#bottommenu {
   display: none;
 
   ul {
@@ -186,7 +187,30 @@ header {
   align-items: center;
   column-gap: 40px;
 
-  nav {
+  .burger {
+    anchor-name: --burger;
+  }
+
+  #popmenu {
+    position: absolute;
+    position-anchor: --burger;
+    background-color: green;
+    margin: 0;
+    inset: auto;
+    border: 0;
+    top: anchor(bottom);
+    right: anchor(right);
+
+    a {
+      color: white;
+    }
+
+    &:popover-open {
+      display: grid;
+    }
+  }
+
+  #topmenu {
     height: 100%;
 
     ul {
@@ -241,7 +265,7 @@ main {
 
     &:has(img:hover) img:not(:hover) {
       scale: 0.9;
-      opacity: 0.6;
+      opacity: 0.7;
     }
 
     @media (width > 500px) {
@@ -485,7 +509,9 @@ footer {
 }
 
 @media (width > 850px) {
-  nav {
+
+  #topmenu,
+  #bottommenu {
     display: inline;
   }
 
