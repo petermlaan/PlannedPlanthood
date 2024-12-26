@@ -409,11 +409,42 @@ main {
         gap: 5px;
 
         .tag {
-          background-color: grey;
           color: white;
-          font-size: 0.5rem;
+          font-size: 0.8rem;
           padding: 3px 0.7rem;
           border-radius: 20% 20% 20% 20% / 50% 50% 50% 50%;
+        }
+
+        .tag-red {
+          background-color: red;
+        }
+
+        .tag-orange {
+          background-color: orange;
+        }
+
+        .tag-green {
+          background-color: green;
+        }
+
+        .tag-yellow {
+          background-color: yellow;
+        }
+
+        .tag-blue {
+          background-color: blue;
+        }
+
+        .tag-purple {
+          background-color: purple;
+        }
+
+        .tag-violet {
+          background-color: violet;
+        }
+
+        .tag-bluegreen {
+          background-color: #059;
         }
       }
 
@@ -495,6 +526,11 @@ footer {
   grid-template-columns: auto min-content;
   justify-content: space-around;
 
+  a {
+    color: white;
+    font-weight: bold;
+  }
+
   .footer-left {
     max-width: 400px;
     display: grid;
@@ -519,16 +555,12 @@ footer {
 
     li {
       margin-bottom: 20px;
-
-      a {
-        color: white;
-        font-weight: bold;
-      }
     }
   }
 }
 
 @media (width > 850px) {
+
   #topmenu,
   #bottommenu {
     display: inline;
