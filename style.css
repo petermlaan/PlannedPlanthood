@@ -120,12 +120,14 @@ main {
 }
 
 /* Global/base */
+h1,
 h2,
 h3 {
   font-weight: var(--fw-bold);
   line-height: 1;
 }
 
+h1,
 h2 {
   font-size: var(--fs-700);
 }
@@ -205,6 +207,7 @@ header {
     border-radius: 10%;
     margin: 5px 0;
     padding: 10px;
+    text-align: start;
 
     li {
       padding: 5px 0;
@@ -422,24 +425,21 @@ main {
         .tag {
           color: white;
           font-size: 0.8rem;
-          padding: 3px 0.7rem;
+          font-weight: bold;
+          padding: 0.5rem 0.8rem;
           border-radius: 20% 20% 20% 20% / 50% 50% 50% 50%;
         }
 
         .tag-red {
-          background-color: red;
+          background-color: #a00;
         }
 
         .tag-orange {
-          background-color: orange;
+          background-color: #960;
         }
 
         .tag-green {
-          background-color: var(--clr-accent);
-        }
-
-        .tag-yellow {
-          background-color: yellow;
+          background-color: green;
         }
 
         .tag-blue {
@@ -447,11 +447,11 @@ main {
         }
 
         .tag-purple {
-          background-color: purple;
+          background-color: #509;
         }
 
         .tag-violet {
-          background-color: violet;
+          background-color: #92c;
         }
 
         .tag-bluegreen {
