@@ -12,18 +12,6 @@
   --clr-green-800: hsl(169, 86%, 12%);
   --clr-green-900: hsl(169, 80%, 12%);
 
-  --clr-robust: hsl(221, 63%, 32%);
-  --clr-green: hsl(110, 63%, 32%);
-  --clr-flower: hsl(2, 92%, 33%);
-  --clr-colorful: hsl(303, 55%, 47%);
-  --clr-sunloving: hsl(27, 88%, 33%);
-  --clr-air: hsl(180, 84%, 27%);
-  --clr-decorative: hsl(278, 79%, 40%);
-  --clr-edible: hsl(68, 61%, 30%);
-  --clr-easy: hsl(224, 86%, 58%);
-  --clr-fragrant: hsl(327, 51%, 47%);
-  --clr-fast: hsl(218, 11%, 34%);
-
   --border-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   --font-base: "Open Sans", "Segoe UI", Tahoma, sans-serif;
@@ -183,7 +171,7 @@ body {
 
 header {
   position: relative;
-  background-color: white;
+  background-color: var(--clr-primary-light-1);
   padding: 0 10px;
   display: flex;
   justify-content: center;
@@ -214,7 +202,7 @@ header {
     }
 
     a {
-      color: white;
+      color: var(--clr-primary-light-1);
     }
 
     &:popover-open {
@@ -246,7 +234,7 @@ header {
           background-color: var(--clr-accent);
 
           a {
-            color: white;
+            color: var(--clr-primary-light-1);
           }
         }
       }
@@ -268,7 +256,7 @@ main {
     gap: 1rem;
 
     .popularimages {
-      background-color: white;
+      background-color: var(--clr-primary-light-1);
       padding: 20px;
       display: grid;
       grid-template-columns: 200px;
@@ -336,7 +324,7 @@ main {
   }
 
   .newsletter {
-    background-color: white;
+    background-color: var(--clr-primary-light-1);
     width: 100%;
     margin: 0;
     padding: 40px 20px;
@@ -387,7 +375,7 @@ main {
 
         [type="submit"] {
           background-color: var(--clr-accent);
-          color: white;
+          color: var(--clr-primary-light-1);
           padding: 7px 15px;
           margin: 2px;
           border-top-left-radius: 20% 50%;
@@ -435,7 +423,7 @@ main {
       display: grid;
       align-content: start;
       grid-auto-rows: auto auto auto auto 1fr;
-      background-color: white;
+      background-color: var(--clr-primary-light-1);
       padding: 20px;
       width: 300px;
 
@@ -460,7 +448,7 @@ main {
         gap: 5px;
 
         .tag {
-          color: white;
+          color: var(--clr-primary-light-1);
           font-size: 0.8rem;
           font-weight: bold;
           padding: 0.5rem 0.8rem;
@@ -504,7 +492,7 @@ main {
         align-self: self-end;
         display: flex;
         justify-content: start;
-        background-color: white;
+        background-color: var(--clr-primary-light-1);
         color: var(--clr-primary-dark);
         padding: 10px 0 0 0;
 
@@ -527,7 +515,7 @@ main {
   }
 
   .previous {
-    background-color: white;
+    background-color: var(--clr-primary-light-1);
     padding: 50px 20px;
     width: 100%;
     display: grid;
@@ -566,7 +554,7 @@ main {
       input {
         justify-self: flex-end;
         background-color: var(--clr-accent);
-        color: white;
+        color: var(--clr-primary-light-1);
         padding: 8px 12px;
         margin: 10px 0;
         border-top-left-radius: 10% 50%;
@@ -592,14 +580,14 @@ main {
 
 footer {
   background-color: var(--clr-accent);
-  color: white;
+  color: var(--clr-primary-light-1);
   padding: 40px 20px;
   display: grid;
   grid-template-columns: auto min-content;
   justify-content: space-around;
 
   a {
-    color: white;
+    color: var(--clr-primary-light-1);
     font-weight: bold;
   }
 
@@ -617,7 +605,7 @@ footer {
       }
 
       h2 {
-        color: white;
+        color: var(--clr-primary-light-1);
       }
     }
   }
