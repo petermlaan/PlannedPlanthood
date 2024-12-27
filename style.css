@@ -262,42 +262,76 @@ main {
   justify-content: center;
   gap: 20px;
 
-  .popularimages {
-    background-color: white;
-    padding: 20px;
+  .popular {
     display: grid;
-    grid-template-columns: 200px;
+    justify-items: center;
+    gap: 1rem;
 
-    >img {
-      width: 200px;
-      height: 200px;
-      transition: scale 300ms linear, opacity 300ms linear;
+    .popularimages {
+      background-color: white;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 200px;
 
-      &:hover {
-        scale: 1.1;
+      >img {
+        width: 100%;
+        height: 100%;
+        transition: scale 300ms linear, opacity 300ms linear;
+
+        &:hover {
+          scale: 1.1;
+
+          @media (prefers-reduced-motion: reduce) {
+            scale: 1;
+          }
+        }
+      }
+
+      &:has(img:hover) img:not(:hover) {
+        scale: 0.9;
+        opacity: 0.7;
 
         @media (prefers-reduced-motion: reduce) {
           scale: 1;
+          opacity: 1;
         }
       }
-    }
 
-    &:has(img:hover) img:not(:hover) {
-      scale: 0.9;
-      opacity: 0.7;
-
-      @media (prefers-reduced-motion: reduce) {
-        scale: 1;
-        opacity: 1;
+      @media (width > 500px) {
+        grid-template-columns: 200px 200px;
       }
-    }
 
-    @media (width > 500px) {
-      grid-template-columns: 200px 200px;
-    }
+      @media (width > 750px) {
+        grid-template-areas:
+          "a a b c d d"
+          "a a e e f f";
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: 200px 200px;
 
-    @media (width > 750px) {
-      grid-template-columns: 200px 200px 200px;
+        .pop1 {
+          grid-area: a;
+        }
+
+        .pop2 {
+          grid-area: b;
+        }
+
+        .pop3 {
+          grid-area: c;
+        }
+
+        .pop4 {
+          grid-area: d;
+        }
+
+        .pop5 {
+          grid-area: e;
+        }
+
+        .pop6 {
+          grid-area: f;
+        }
+      }
     }
   }
 
@@ -398,6 +432,9 @@ main {
 
     .card {
       position: relative;
+      display: grid;
+      align-content: start;
+      grid-auto-rows: auto auto auto auto 1fr;
       background-color: white;
       padding: 20px;
       width: 300px;
@@ -461,6 +498,30 @@ main {
 
       h3 {
         padding-bottom: 10px;
+      }
+
+      .card-footer {
+        align-self: self-end;
+        display: flex;
+        justify-content: start;
+        background-color: white;
+        color: var(--clr-primary-dark);
+        padding: 10px 0 0 0;
+
+        img {
+          width: 80px;
+        }
+
+        .card-footer-r {
+          display: grid;
+          align-content: center;
+          padding-left: 10px;
+          gap: 0;
+
+          .card-footer-name {
+            font-weight: bold;
+          }
+        }
       }
     }
   }
