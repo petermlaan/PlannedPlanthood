@@ -542,8 +542,11 @@ main {
         text-align: center;
       }
 
-      input {
+      form {
         justify-self: flex-end;
+      }
+
+      input {
         padding: 8px 12px;
         margin: 10px 0;
       }
