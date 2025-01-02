@@ -140,13 +140,9 @@ a {
 }
 
 .logo {
-  padding: 10px;
+  padding: 10px 0;
   display: flex;
   align-items: center;
-
-  a {
-    margin-left: 20px;
-  }
 }
 
 #topmenu,
@@ -172,16 +168,21 @@ body {
 header {
   position: relative;
   background-color: var(--clr-primary-light-1);
-  padding: 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1em;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: start;
 
   .burger {
+    justify-self: end;
     anchor-name: --burgera;
     border: 0;
     background-color: inherit;
+    margin-right: 2rem;
+
+    img:hover {
+      background-color: var(--clr-accent-light-1);
+      cursor: pointer;
+    }
   }
 
   .popmenu {
@@ -189,7 +190,7 @@ header {
     position-anchor: --burgera;
     inset: auto;
     top: anchor(bottom);
-    right: anchor(right);
+    left: anchor(left);
     background-color: var(--clr-accent);
     border: 0;
     border-radius: 10%;
@@ -213,6 +214,7 @@ header {
 
   #topmenu {
     height: 100%;
+    justify-self: end;
 
     ul {
       height: 100%;
@@ -625,7 +627,7 @@ footer {
 }
 
 /* Show/hide top, burger and bottom menus */
-@media (width > 850px) {
+@media (width > 750px) {
 
   #topmenu,
   #bottommenu {
