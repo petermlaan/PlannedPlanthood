@@ -270,7 +270,8 @@ main {
       background-color: var(--clr-primary-light-1);
       padding: 20px;
       display: grid;
-      grid-template-columns: 150px 150px;
+      grid-template-columns: 200px;
+      grid-auto-rows: 200px;
 
       >img {
         width: 100%;
@@ -292,6 +293,10 @@ main {
         }
       }
 
+      @media (width > 500px) {
+        grid-template-columns: 200px 200px;
+      }
+
       @media (width > 700px) {
         grid-template-columns: 200px 200px 200px;
       }
@@ -301,7 +306,7 @@ main {
           "a a b c d d"
           "a a e e f f";
         grid-template-columns: repeat(6, 150px);
-        grid-template-rows: 300px 300px;
+        grid-auto-rows: 300px 300px;
 
         .pop1 {
           grid-area: a;
