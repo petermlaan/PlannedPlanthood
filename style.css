@@ -263,11 +263,12 @@ main {
       background-color: var(--clr-primary-light-1);
       padding: 20px;
       display: grid;
-      grid-template-columns: 200px;
+      grid-template-columns: 200px 200px;
 
       >img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
         transition: scale 300ms linear, opacity 300ms linear;
 
         &:hover {
@@ -284,16 +285,16 @@ main {
         }
       }
 
-      @media (width > 500px) {
-        grid-template-columns: 200px 200px;
+      @media (width > 700px) {
+        grid-template-columns: 200px 200px 200px;
       }
 
-      @media (width > 750px) {
+      @media (width > 1000px) {
         grid-template-areas:
           "a a b c d d"
           "a a e e f f";
-        grid-template-columns: repeat(6, 100px);
-        grid-template-rows: 200px 200px;
+        grid-template-columns: repeat(6, 150px);
+        grid-template-rows: 300px 300px;
 
         .pop1 {
           grid-area: a;
