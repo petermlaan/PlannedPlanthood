@@ -117,7 +117,7 @@ h3 {
 
 h1,
 h2 {
-  font-size: var(--fs-700);
+  font-size: var(--fs-600);
 }
 
 h3 {
@@ -140,9 +140,13 @@ a {
 }
 
 .logo {
-  padding: 10px 0;
   display: flex;
   align-items: center;
+
+  img {
+    width: 60px;
+    margin: 0 1rem;
+  }
 }
 
 #topmenu,
@@ -210,7 +214,6 @@ header {
       display: grid;
     }
   }
-
 
   #topmenu {
     height: 100%;
